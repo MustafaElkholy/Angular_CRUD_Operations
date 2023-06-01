@@ -1,0 +1,31 @@
+<div class="text-center">
+    <h2 class="text-primary m-3">Our Products</h2>
+    <div class="container row mx-auto mb-5 mt-3 row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+        <div class="col" *ngFor="let product of productList; let i = index">
+            <div class="card h-100">
+                <!-- <img src="assets/images/{{myProduct.src}}" class="card-img-top" alt="..."> -->
+                <div class="card-body bg-light">
+                    <h5 class="card-title">{{product.productName}}</h5>
+                    <p class="card-text fw-lighter fs-6 text mb-3">{{product.productDescription}}</p>
+                    <p class="card-text">Price: {{product.price}}LE</p>
+                    <div [ngSwitch]="product.quantity">
+                        <p *ngSwitchCase="0" class="fw-lighter fs-6 text text-danger">No Product Avails..</p>
+                        <p *ngSwitchCase="1" class="fw-lighter fs-6 text text-warning">Only One Product Avail..</p>
+                        <p *ngSwitchDefault class="fw-lighter fs-6 text">Qunatity :{{product.quantity}}</p>
+
+                    </div>
+                    <div class="mt-2">
+                        <button type="button" (click)="buyProduct(i)" class="btn mx-3" [ngClass]="{
+                            ' btn-danger disabled ':product.quantity == 0,
+                            ' btn-outline-primary':product.quantity != 0
+                        }"> {{product.quantity == 0 ? "Sold" : "Buy"}}
+                        </button>
+                        <button class="btn btn-outline-primary" [routerLink]="['/products',product.id]">View</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

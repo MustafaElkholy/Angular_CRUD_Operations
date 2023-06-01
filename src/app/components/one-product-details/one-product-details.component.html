@@ -1,0 +1,19 @@
+<div class="card h-100 m-3 w-50 mx-auto border border-0" >
+    <div class="card-body mx-auto">
+        <h5 class="card-title">{{productItem.productName}}</h5>
+        <p class="card-text">Price: {{productItem.price}}LE</p>
+        <div [ngSwitch]="productItem.quantity">
+            <p *ngSwitchCase="0" class="fw-lighter fs-6 text text-danger">No Product Avails..</p>
+            <p *ngSwitchCase="1" class="fw-lighter fs-6 text text-warning">Only One Product Avail..</p>
+            <p *ngSwitchDefault class="fw-lighter fs-6 text">Qunatity :{{productItem.quantity}}</p>
+
+        </div>
+        <button (click)="buyProduct()" class="btn" [ngClass]="{
+            ' btn-danger disabled ':productItem.quantity == 0,
+            ' btn-outline-primary':productItem.quantity != 0
+        }"> {{productItem.quantity == 0 ? "Sold" : "Buy"}}
+        </button>
+        <button class="btn btn-info mx-4"[routerLink]="['/products']" >Back To products</button>
+
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="card h-100">
+    <!-- <img src="assets/images/{{myProduct.src}}" class="card-img-top" alt="..."> -->
+    <div class="card-body bg-light">
+        <h5 class="card-title">{{productList.productName}}</h5>
+        <p class="card-text fw-lighter fs-6 text">{{productList.productDescription}}</p>
+        <p class="card-text">Price: {{productList.price}}LE</p>
+        <div [ngSwitch]="productList.quantity">
+            <p *ngSwitchCase="0" class="fw-lighter fs-6 text text-danger">No Product Avails..</p>
+            <p *ngSwitchCase="1" class="fw-lighter fs-6 text text-warning">Only One Product Avail..</p>
+            <p *ngSwitchDefault class="fw-lighter fs-6 text">Qunatity :{{productList.quantity}}</p>
+
+        </div>
+        <button (click)="buyProduct()" class="btn" [ngClass]="{
+            ' btn-danger disabled ':productList.quantity == 0,
+            ' btn-outline-primary':productList.quantity != 0
+        }"> {{productList.quantity == 0 ? "Sold" : "Buy"}}
+        </button>
+    </div>
+</div>

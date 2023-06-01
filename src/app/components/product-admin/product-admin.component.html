@@ -1,0 +1,31 @@
+<div class="bg-light p-5 text-center">
+    <h2>Our Products</h2>
+    <div class="container">
+        <button class="btn btn-info m-4" [routerLink]="['/products/0/edit']">Add New Product</button>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Product Name</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Quantity</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let product of productList">
+                    <th scope="row">{{product.id}}</th>
+                    <td>{{product.productName}}</td>
+                    <td>{{product.price | currency :"LE " }}</td>
+                    <td>{{product.quantity}}</td>
+                    <td>
+                        <button class="btn btn-info mx-1"[routerLink]="['/products',product.id,'edit']" >Edit</button>
+                        <button class="btn btn-danger mx-1"(click)="deleteProduct(product.id)">Delete</button>
+                        <button class="btn btn-warning mx-1" [routerLink]="['/products',product.id]">View</button>
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+</div>
