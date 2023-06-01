@@ -1,0 +1,59 @@
+{
+    "Products": [
+      {
+        "id": 1,
+        "productName": "Dell Inspiron 13 5310 i7",
+        "productDescription": "DELL Laptop Dell Inspiron 13 5310 i7-11390H 16GB 512GB SSD VGA 2GB MX450 13.3-inch Non-Touch Win 11",
+        "price": 20000,
+        "quantity": 1},
+      {
+        "id": 2,
+        "productName": "Lenovo IdeaPad Flex 5",
+        "productDescription": "Lenovo IdeaPad Flex 5 14IAU7 - Intel® Core™ I5-1235U - 8GB - 512GB SSD - Intel Iris Xe Graphics",
+        "price": 25000,
+        "quantity": 12
+      },
+      {
+        "id": 3,
+        "productName": "HP Victus Gaming 15",
+        "productDescription": "HP Victus Gaming 15-FA0083nia Core i7-12700H 16GB-SSD 512GB-NVIDIA GeForce RTX 3050 4GB-15.6 FHD IPS 144HZ",
+        "price": 22000,
+        "quantity": 3
+      },
+      {
+        "id": 4,
+        "productName": "HP Victus Gaming 15",
+        "productDescription": "HP Victus Gaming 15-FA0083nia Core i7-12700H 16GB-SSD 512GB-NVIDIA GeForce RTX 3050 4GB-15.6 FHD IPS 144HZ",
+        "price": 19000,
+        "quantity": 4
+      },
+      {
+        "id": 5,
+        "productName": "One Plus Nord CE 2",
+        "productDescription": "One Plus Nord CE 2 Dual Sim 5G - 8GB RAM + 128GB Internal Storage - Gray",
+        "price": 15000,
+        "quantity": 0
+      },
+      {
+        "id": 6,
+        "productName": "Apple IPhone 13 Pro",
+        "productDescription": "Apple IPhone 13 Pro Single SIM With FaceTime - 128GB - AlpineGreen",
+        "price": 30000,
+        "quantity": 4
+      },
+      {
+        "productName": "Nokia G60 5G",
+        "price": 10199,
+        "quantity": 20,
+        "productDescription" :"with recycled plastic and made to perform. Covered by 3 years of updates and 2 years of warranty. 6 GB RAM, 128 GB Internal storage, Dual SIM",
+        "id": 7
+      }
+       ,
+      {
+        "productName": "Nokia X30 5G",
+        "price": 17000,
+        "quantity": 15,
+        "productDescription": "Built to do better, for longer. 8 GB RAM, 256 GB Internal storage, Dual SIM",
+        "id": 8}
+   ]
+}
